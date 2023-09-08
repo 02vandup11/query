@@ -1,0 +1,70 @@
+use admin
+switched to db admin
+
+> db.ad.insertMany([{"name":"aditya","age":18},{"name":"rushi","age":18}])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("64f15fe36a0b287e5a80ee3a"),
+                ObjectId("64f15fe36a0b287e5a80ee3b")
+        ]
+}
+
+> db.ad.find()
+{ "_id" : ObjectId("64f15fe36a0b287e5a80ee3a"), "name" : "aditya", "age" : 18 }
+{ "_id" : ObjectId("64f15fe36a0b287e5a80ee3b"), "name" : "rushi", "age" : 18 }
+
+> db.ad.find().pretty()
+{
+        "_id" : ObjectId("64f15fe36a0b287e5a80ee3a"),
+        "name" : "aditya",
+        "age" : 18
+}
+{
+        "_id" : ObjectId("64f15fe36a0b287e5a80ee3b"),
+        "name" : "rushi",
+        "age" : 18
+}
+
+> show collections
+ad
+system.version
+
+> db.ad.drop()
+true
+
+> show collections
+system.version
+
+
+############################################################################################
+
+create collection explicitly
+
+> db.createCollection("mam",{capped:"true",autoIndexId:"true",size:6142800,max:10000})
+{
+        "note" : "the autoIndexId option is deprecated and will be removed in a future release",
+        "ok" : 1
+}
+
+> show collections
+mam
+system.version
+
+> db.mam.insert({"name":"sam"})
+WriteResult({ "nInserted" : 1 })
+
+
+> db.man.find().pretty()
+{ "_id" : ObjectId("64f165156a0b287e5a80ee3d"), "name" : "sam" }
+
+> show collections
+mam
+system.version
+
+> db.mam.drop()
+true
+
+> show collections
+system.version
+>

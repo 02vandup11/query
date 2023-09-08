@@ -1,0 +1,230 @@
+> db.cus.insertMany([{"cus_id":01,"cusfname":"vandana","cuslname":"padhi","cususername":"vandu","cuspass":"vanduu","cusphn":9702980426,"cusemail":"vandu@gmail.com"},{"cus_id":02,"cusfname":"nandana","cuslname":"nair","cususername":"nandu","cuspass":"nanduu","cusphn":9702782426,"cusemail":"nandu@gmail.com"},{"cus_id":03,"cusfname":"sristi","cuslname":"shetty","cususername":"sris","cuspass":"sriss","cusphn":9702914226,"cusemail":"sris@gmail.com"},{"cus_id":04,"cusfname":"vaidehi","cuslname":"kelkar","cususername":"vaidu","cuspass":"vaiduu","cusphn":9798380426,"cusemail":"vaidu@gmail.com"},{"cus_id":05,"cusfname":"akshada","cuslname":"kadlak","cususername":"akshu","cuspass":"akshuu","cusphn":9701990426,"cusemail":"akshu@gmail.com"}])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("64fa8d4ca53563958fdf2304"),
+                ObjectId("64fa8d4ca53563958fdf2305"),
+                ObjectId("64fa8d4ca53563958fdf2306"),
+                ObjectId("64fa8d4ca53563958fdf2307"),
+                ObjectId("64fa8d4ca53563958fdf2308")
+        ]
+}
+> db.cus.find().pretty()
+{
+        "_id" : ObjectId("64fa8b50a53563958fdf2303"),
+        "cus_id" : 1,
+        "cusfname" : "vandana",
+        "cuslname" : "padhi",
+        "cususername" : "vandu"
+}
+{
+        "_id" : ObjectId("64fa8d4ca53563958fdf2304"),
+        "cus_id" : 1,
+        "cusfname" : "vandana",
+        "cuslname" : "padhi",
+        "cususername" : "vandu",
+        "cuspass" : "vanduu",
+        "cusphn" : 9702980426,
+        "cusemail" : "vandu@gmail.com"
+}
+{
+        "_id" : ObjectId("64fa8d4ca53563958fdf2305"),
+        "cus_id" : 2,
+        "cusfname" : "nandana",
+        "cuslname" : "nair",
+        "cususername" : "nandu",
+        "cuspass" : "nanduu",
+        "cusphn" : 9702782426,
+        "cusemail" : "nandu@gmail.com"
+}
+{
+        "_id" : ObjectId("64fa8d4ca53563958fdf2306"),
+        "cus_id" : 3,
+        "cusfname" : "sristi",
+        "cuslname" : "shetty",
+        "cususername" : "sris",
+        "cuspass" : "sriss",
+        "cusphn" : 9702914226,
+        "cusemail" : "sris@gmail.com"
+}
+{
+        "_id" : ObjectId("64fa8d4ca53563958fdf2307"),
+        "cus_id" : 4,
+        "cusfname" : "vaidehi",
+        "cuslname" : "kelkar",
+        "cususername" : "vaidu",
+        "cuspass" : "vaiduu",
+        "cusphn" : 9798380426,
+        "cusemail" : "vaidu@gmail.com"
+}
+{
+        "_id" : ObjectId("64fa8d4ca53563958fdf2308"),
+        "cus_id" : 5,
+        "cusfname" : "akshada",
+        "cuslname" : "kadlak",
+        "cususername" : "akshu",
+        "cuspass" : "akshuu",
+        "cusphn" : 9701990426,
+        "cusemail" : "akshu@gmail.com"
+}
+
+## list the customer whose id is 1
+> db.cus.findOne({"cus_id":5})
+{
+        "_id" : ObjectId("64fa8d4ca53563958fdf2308"),
+        "cus_id" : 5,
+        "cusfname" : "akshada",
+        "cuslname" : "kadlak",
+        "cususername" : "akshu",
+        "cuspass" : "akshuu",
+        "cusphn" : 9701990426,
+        "cusemail" : "akshu@gmail.com"
+}
+
+## list all custer whose id is less than 3
+> db.cus.find({"cus_id":{$lt:3}}).pretty()
+
+{
+        "_id" : ObjectId("64fa8d4ca53563958fdf2304"),
+        "cus_id" : 1,
+        "cusfname" : "vandana",
+        "cuslname" : "padhi",
+        "cususername" : "vandu",
+        "cuspass" : "vanduu",
+        "cusphn" : 9702980426,
+        "cusemail" : "vandu@gmail.com"
+}
+{
+        "_id" : ObjectId("64fa8d4ca53563958fdf2305"),
+        "cus_id" : 2,
+        "cusfname" : "nandana",
+        "cuslname" : "nair",
+        "cususername" : "nandu",
+        "cuspass" : "nanduu",
+        "cusphn" : 9702782426,
+        "cusemail" : "nandu@gmail.com"
+}
+
+##list all the customer whose id is less than equal to 2
+> db.cus.find({"cus_id":{$lte:2}}).pretty()
+{
+        "_id" : ObjectId("64fa8d4ca53563958fdf2304"),
+        "cus_id" : 1,
+        "cusfname" : "vandana",
+        "cuslname" : "padhi",
+        "cususername" : "vandu",
+        "cuspass" : "vanduu",
+        "cusphn" : 9702980426,
+        "cusemail" : "vandu@gmail.com"
+}
+{
+        "_id" : ObjectId("64fa8d4ca53563958fdf2305"),
+        "cus_id" : 2,
+        "cusfname" : "nandana",
+        "cuslname" : "nair",
+        "cususername" : "nandu",
+        "cuspass" : "nanduu",
+        "cusphn" : 9702782426,
+        "cusemail" : "nandu@gmail.com"
+}
+
+##insert
+
+> db.prod.insertMany([{"proid":101,"proname":"silver oxidized choker","prodes":"Praanvi Silver Oxidised Choker Necklace is pretty and reflects distinct floral aesthetics and recreates opulence in german silver for a more wearable.Measurement-Length: 20cm Breadth: 2.3cm","category":"NECKLACE","price":200,"material":"silver oxideized","color":"silver","customization":"yes"},{"proid":102,"proname":"Rhinestone Choker Necklace","prodes":"Short necklace chain is made of good quality row crystal and alloy,it’s not faded. ","category":"NECKLACE","price":300,"material":"rhinestone","color":"crystal","customization":"yes"}])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("64fa9954a53563958fdf230b"),
+                ObjectId("64fa9954a53563958fdf230c")
+        ]
+}
+
+> db.prod.find().pretty()
+{
+        "_id" : ObjectId("64fa9954a53563958fdf230b"),
+        "proid" : 101,
+        "proname" : "silver oxidized choker",
+        "prodes" : "Praanvi Silver Oxidised Choker Necklace is pretty and reflects distinct floral 	aesthetics and recreates opulence in german silver for a more wearable.Measurement-Length: 20cm 	Breadth: 2.3cm",
+        "category" : "NECKLACE",
+        "price" : 200,
+        "material" : "silver oxideized",
+        "color" : "silver",
+        "customization" : "yes"
+}
+{
+        "_id" : ObjectId("64fa9954a53563958fdf230c"),
+        "proid" : 102,
+        "proname" : "Rhinestone Choker Necklace",
+        "prodes" : "Short necklace chain is made of good quality row crystal and alloy,it’s not faded. ",
+        "category" : "NECKLACE",
+        "price" : 300,
+        "material" : "rhinestone",
+        "color" : "crystal",
+        "customization" : "yes"
+}
+
+##list product price greator than 250
+> db.prod.find({"price":{$gt:250}}).pretty()
+{
+        "_id" : ObjectId("64fa9954a53563958fdf230c"),
+        "proid" : 102,
+        "proname" : "Rhinestone Choker Necklace",
+        "prodes" : "Short necklace chain is made of good quality row crystal and alloy,it’s not faded. ",
+        "category" : "NECKLACE",
+        "price" : 300,
+        "material" : "rhinestone",
+        "color" : "crystal",
+        "customization" : "yes"
+}
+
+##list product price greator than equal to 250
+> db.prod.find({"price":{$gte:250}}).pretty()
+{
+        "_id" : ObjectId("64fa9954a53563958fdf230c"),
+        "proid" : 102,
+        "proname" : "Rhinestone Choker Necklace",
+        "prodes" : "Short necklace chain is made of good quality row crystal and alloy,it’s not faded. ",
+        "category" : "NECKLACE",
+        "price" : 300,
+        "material" : "rhinestone",
+        "color" : "crystal",
+        "customization" : "yes"
+}
+
+##list product color which is not eaul to crystral
+> db.prod.find({"color":{$ne:"crystal"}}).pretty()
+{
+        "_id" : ObjectId("64fa9954a53563958fdf230b"),
+        "proid" : 101,
+        "proname" : "silver oxidized choker",
+        "prodes" : "Praanvi Silver Oxidised Choker Necklace is pretty and reflects distinct floral aesthetics and recreates opulence in german silver for a more wearable.Measurement-Length: 20cm Breadth: 2.3cm",
+        "category" : "NECKLACE",
+        "price" : 200,
+        "material" : "silver oxideized",
+        "color" : "silver",
+        "customization" : "yes"
+}
+
+##clist the customer whose username are vandu,nandu
+> db.cus.find({"cususername":{$in:["vandu", "nandu"]}}).pretty()
+{
+        "_id" : ObjectId("64fa8d4ca53563958fdf2304"),
+        "cus_id" : 1,
+        "cusfname" : "vandana",
+        "cuslname" : "padhi",
+        "cususername" : "vandu",
+        "cuspass" : "vanduu",
+        "cusphn" : 9702980426,
+        "cusemail" : "vandu@gmail.com"
+}
+{
+        "_id" : ObjectId("64fa8d4ca53563958fdf2305"),
+        "cus_id" : 2,
+        "cusfname" : "nandana",
+        "cuslname" : "nair",
+        "cususername" : "nandu",
+        "cuspass" : "nanduu",
+        "cusphn" : 9702782426,
+        "cusemail" : "nandu@gmail.com"
+}
+

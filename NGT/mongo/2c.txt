@@ -1,0 +1,152 @@
+> use dum
+switched to db dum
+
+> db.dum1.insert([{"name":"sris","hobby":"singing","year":2003},{"name":"nan","hobby":"dancing","year":2003}])
+BulkWriteResult({
+        "writeErrors" : [ ],
+        "writeConcernErrors" : [ ],
+        "nInserted" : 2,
+        "nUpserted" : 0,
+        "nMatched" : 0,
+        "nModified" : 0,
+        "nRemoved" : 0,
+        "upserted" : [ ]
+})
+
+> db.dum1.insertMany([{"name":"sris","hobby":"singing","year":2003,"loc":"thane"},{"name":"nan","hobby":"dancing","year":2003,"loc":"domb"}])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("64f167e36a0b287e5a80ee40"),
+                ObjectId("64f167e36a0b287e5a80ee41")
+        ]
+}
+
+> db.dum1.find().pretty()
+{
+        "_id" : ObjectId("64f167546a0b287e5a80ee3e"),
+        "name" : "sris",
+        "hobby" : "singing",
+        "year" : 2003
+}
+{
+        "_id" : ObjectId("64f167546a0b287e5a80ee3f"),
+        "name" : "nan",
+        "hobby" : "dancing",
+        "year" : 2003
+}
+{
+        "_id" : ObjectId("64f167e36a0b287e5a80ee40"),
+        "name" : "sris",
+        "hobby" : "singing",
+        "year" : 2003,
+        "loc" : "thane"
+}
+{
+        "_id" : ObjectId("64f167e36a0b287e5a80ee41"),
+        "name" : "nan",
+        "hobby" : "dancing",
+        "year" : 2003,
+        "loc" : "domb"
+}
+
+
+> db.dum1.update({"name":"sris"},{$set:{"loc":"domb"}})
+WriteResult({ "nMatched" : 1, "nUpserted" : 0, "nModified" : 1 })
+
+> db.dum1.find().pretty()
+{
+        "_id" : ObjectId("64f167546a0b287e5a80ee3e"),
+        "name" : "sris",
+        "hobby" : "singing",
+        "year" : 2003,
+        "loc" : "domb"
+}
+{
+        "_id" : ObjectId("64f167546a0b287e5a80ee3f"),
+        "name" : "nan",
+        "hobby" : "dancing",
+        "year" : 2003
+}
+{
+        "_id" : ObjectId("64f167e36a0b287e5a80ee40"),
+        "name" : "sris",
+        "hobby" : "singing",
+        "year" : 2003,
+        "loc" : "thane"
+}
+{
+        "_id" : ObjectId("64f167e36a0b287e5a80ee41"),
+        "name" : "nan",
+        "hobby" : "dancing",
+        "year" : 2003,
+        "loc" : "domb"
+}
+
+> db.dum1.update({"name":"sris"},{$set:{"loc":"domb"}},{multi:true})
+WriteResult({ "nMatched" : 2, "nUpserted" : 0, "nModified" : 1 })
+
+> db.dum1.find().pretty()
+{
+        "_id" : ObjectId("64f167546a0b287e5a80ee3e"),
+        "name" : "sris",
+        "hobby" : "singing",
+        "year" : 2003,
+        "loc" : "domb"
+}
+{
+        "_id" : ObjectId("64f167546a0b287e5a80ee3f"),
+        "name" : "nan",
+        "hobby" : "dancing",
+        "year" : 2003
+}
+{
+        "_id" : ObjectId("64f167e36a0b287e5a80ee40"),
+        "name" : "sris",
+        "hobby" : "singing",
+        "year" : 2003,
+        "loc" : "domb"
+}
+{
+        "_id" : ObjectId("64f167e36a0b287e5a80ee41"),
+        "name" : "nan",
+        "hobby" : "dancing",
+        "year" : 2003,
+        "loc" : "domb"
+}
+
+> db.dum1.remove({"year":2003})
+WriteResult({ "nRemoved" : 4 })
+
+> db.dum1.find().pretty()
+
+> db.dum1.drop()
+true
+
+> show collections
+
+> db.dum2.insert({"name":"sris","year":2003})
+WriteResult({ "nInserted" : 1 })
+
+> db.dum2.find()
+{ "_id" : ObjectId("64f16dc86a0b287e5a80ee42"), "name" : "sris", "year" : 2003 }
+
+> db.dum2.find({"year":2003})
+{ "_id" : ObjectId("64f16dc86a0b287e5a80ee42"), "name" : "sris", "year" : 2003 }
+>
+
+> db.dum2.insertMany([{"name":"aksh","age":20},{"name":"vai","age":18},{"name":"aryan","age":19}])
+{
+        "acknowledged" : true,
+        "insertedIds" : [
+                ObjectId("64f172266a0b287e5a80ee43"),
+                ObjectId("64f172266a0b287e5a80ee44"),
+                ObjectId("64f172266a0b287e5a80ee45")
+        ]
+}
+> db.dum2.find()
+{ "_id" : ObjectId("64f172266a0b287e5a80ee43"), "name" : "aksh", "age" : 20 }
+{ "_id" : ObjectId("64f172266a0b287e5a80ee44"), "name" : "vai", "age" : 18 }
+{ "_id" : ObjectId("64f172266a0b287e5a80ee45"), "name" : "aryan", "age" : 19 }
+>
+

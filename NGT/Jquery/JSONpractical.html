@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.2.1.min.js"></script>
+</head>
+<body>
+    <div>
+
+    </div>
+    <script>
+        var book = {
+            "title" : "Its time to Travel",
+            "author" : "Sangeeta Parag",
+            "date" : new Date("02-JAN-2005"),
+        }
+        
+        console.log(book);
+
+        var StringifyBookInfo = JSON.stringify(book,null,2);
+        console.log(StringifyBookInfo);
+
+        var PraseBookInfo = JSON.parse(StringifyBookInfo,function(key,value){
+            if(key=='date'){
+                return new Date(value);
+            }
+            return value;
+        });
+        console.log(PraseBookInfo);
+        
+
+    async function FetchStudentJson(){
+        const response = await fetch('./student.json');
+        const data = await response.json();
+        return data;
+    }
+
+    FetchStudentJson().then((data) => {
+        console.log(data);
+        for (var student in data){
+            $data = data[student].firstname + " " + data[student].lastname;
+            $("div").append("<p>"+ $data +"</p>");
+        }
+    });
+   
+
+
+// [
+//     {
+//        "student_id" : 2021080317,
+//        "student_name" : "Rushi Shinde",
+//         "student_department" : "BscIT",
+//         "student_year" : "Third",
+//         "student_dob" : "27-MAR-2003"
+//     },
+//     {
+//         "student_id" : 2021080318,
+//         "student_name" : "Raman Shing",
+//          "student_department" : "BscIT",
+//          "student_year" : "Third",
+//          "student_dob" : "07-MAY-2003"
+//      }
+// ]
+    </script>
+</body>
+</html>

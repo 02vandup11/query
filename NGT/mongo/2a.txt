@@ -1,0 +1,33 @@
+show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+
+> use customerdb
+switched to db customerdb
+
+> db.cus.insert({"name":"vandana","age":18})
+WriteResult({ "nInserted" : 1 })
+
+> show collections
+cus
+
+> db.cus.find()
+{ "_id" : ObjectId("64f15cd96a0b287e5a80ee39"), "name" : "vandana", "age" : 18 }
+
+> show dbs
+admin       0.000GB
+config      0.000GB
+customerdb  0.000GB
+local       0.000GB
+
+
+
+> db.dropDatabase()
+{ "dropped" : "customerdb", "ok" : 1 }
+
+> show dbs
+admin   0.000GB
+config  0.000GB
+local   0.000GB
+
