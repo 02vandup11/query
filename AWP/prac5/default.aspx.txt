@@ -1,0 +1,32 @@
+default.aspx
+
+<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true"
+    CodeFile="Default.aspx.cs" Inherits="_Default" %>
+
+
+<asp:Content ID="HeaderContent" runat="server" ContentPlaceHolderID="HeadContent">Welcome!! to Header
+</asp:Content>
+<asp:Content ID="BodyContent" runat="server" ContentPlaceHolderID="MainContent">
+    <h2>
+        Welcome to ASP.NET!
+    </h2>
+    <p>
+        To learn more about ASP.NET visit <a href="http://www.asp.net" title="ASP.NET Website">www.asp.net</a>.
+    </p>
+    <p>
+        You can also find <a href="http://go.microsoft.com/fwlink/?LinkID=152368&amp;clcid=0x409"
+            title="MSDN ASP.NET Docs">documentation on ASP.NET at MSDN</a>.
+    </p>
+    <div 
+        style="border-style: solid; border-color: inherit; border-width: 1px; padding: 5px;
+        font-size: large;  background-color: #ffffcc">
+        <asp:Label ID="Label1" runat="server"> Type something here:
+        </asp:Label>
+        <asp:TextBox ID="TextBox1" runat="server" SkinID="sk1">
+        </asp:TextBox>
+        <br />
+        <br />
+        <asp:Button ID="Button1" runat="server" Text="Submit"></asp:Button>
+    </div>
+</asp:Content>
+

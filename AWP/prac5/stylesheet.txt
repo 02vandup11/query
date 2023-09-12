@@ -1,0 +1,12 @@
+stylesheet
+
+
+#Content2
+{
+    font-family: 'Lucida Console';
+    font-size: small;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+
