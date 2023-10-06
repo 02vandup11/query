@@ -122,3 +122,367 @@ myresult = mycol.find().limit(2)
 for x in myresult:
   print(x)
 '''
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+Output - PYTHON MONGO CONNECTIVITY
+
+================== RESTART: C:/vaidehi/pythonconnection.py ==================
+hello9
+Database(MongoClient(host=['localhost:27017'], document_class=dict, tz_aware=False, connect=True), 'KelkarM')
+['admin', 'config', 'kelkarM', 'local']
+>>> 
+================== RESTART: C:/vaidehi/pythonconnection.py ==================
+hello9
+Database(MongoClient(host=['localhost:27017'], document_class=dict, tz_aware=False, connect=True), 'KelkarM')
+['admin', 'config', 'kelkarM', 'local']
+[]
+>>> 
+================== RESTART: C:/vaidehi/pythonconnection.py ==================
+hello9
+Database(MongoClient(host=['localhost:27017'], document_class=dict, tz_aware=False, connect=True), 'KMishthanna')
+['admin', 'config', 'kelkarM', 'local']
+[]
+>>> 
+================== RESTART: C:/vaidehi/pythonconnection.py ==================
+hello9
+Database(MongoClient(host=['localhost:27017'], document_class=dict, tz_aware=False, connect=True), 'KMishthanna')
+['admin', 'config', 'kelkarM', 'local']
+[]
+>>> 
+================== RESTART: C:/vaidehi/pythonconnection.py ==================
+hello9
+Database(MongoClient(host=['localhost:27017'], document_class=dict, tz_aware=False, connect=True), 'KMishthanna')
+>>> 
+================== RESTART: C:/vaidehi/pythonconnection.py ==================
+hello9
+Database(MongoClient(host=['localhost:27017'], document_class=dict, tz_aware=False, connect=True), 'KMishthanna')
+['admin', 'config', 'kelkarM', 'local']
+>>> 
+================== RESTART: C:/vaidehi/pythonconnection.py ==================
+hello9
+Database(MongoClient(host=['localhost:27017'], document_class=dict, tz_aware=False, connect=True), 'admdb')
+['admin', 'config', 'kelkarM', 'local']
+[]
+>>> 
+================== RESTART: C:/vaidehi/pythonconnection.py ==================
+hello9
+Database(MongoClient(host=['localhost:27017'], document_class=dict, tz_aware=False, connect=True), 'admdb')
+['admin', 'config', 'kelkarM', 'local']
+[]
+>>> 
+================== RESTART: C:/vaidehi/pythonconnection.py ==================
+hello9
+Database(MongoClient(host=['localhost:27017'], document_class=dict, tz_aware=False, connect=True), 'admdb')
+['admdb', 'admin', 'config', 'kelkarM', 'local']
+['admcol']
+[ObjectId('651e2c02db07d018a8a5cf4a'), ObjectId('651e2c02db07d018a8a5cf4b'), ObjectId('651e2c02db07d018a8a5cf4c'), ObjectId('651e2c02db07d018a8a5cf4d'), ObjectId('651e2c02db07d018a8a5cf4e'), ObjectId('651e2c02db07d018a8a5cf4f'), ObjectId('651e2c02db07d018a8a5cf50'), ObjectId('651e2c02db07d018a8a5cf51'), ObjectId('651e2c02db07d018a8a5cf52'), ObjectId('651e2c02db07d018a8a5cf53'), ObjectId('651e2c02db07d018a8a5cf54'), ObjectId('651e2c02db07d018a8a5cf55')]
+>>> 
+================== RESTART: C:/vaidehi/pythonconnection.py ==================
+hello9
+Database(MongoClient(host=['localhost:27017'], document_class=dict, tz_aware=False, connect=True), 'admdb')
+['admdb', 'admin', 'config', 'kelkarM', 'local']
+['admcol']
+>>> 
+================== RESTART: C:/vaidehi/pythonconnection.py ==================
+hello9
+Database(MongoClient(host=['localhost:27017'], document_class=dict, tz_aware=False, connect=True), 'admdb')
+['admdb', 'admin', 'config', 'kelkarM', 'local']
+['admcol']
+[ObjectId('651e2c5adb07d01894f6a434'), ObjectId('651e2c5adb07d01894f6a435'), ObjectId('651e2c5adb07d01894f6a436'), ObjectId('651e2c5adb07d01894f6a437'), ObjectId('651e2c5adb07d01894f6a438'), ObjectId('651e2c5adb07d01894f6a439'), ObjectId('651e2c5adb07d01894f6a43a'), ObjectId('651e2c5adb07d01894f6a43b'), ObjectId('651e2c5adb07d01894f6a43c'), ObjectId('651e2c5adb07d01894f6a43d'), ObjectId('651e2c5adb07d01894f6a43e'), ObjectId('651e2c5adb07d01894f6a43f')]
+>>> 
+================== RESTART: C:/vaidehi/pythonconnection.py ==================
+hello9
+Database(MongoClient(host=['localhost:27017'], document_class=dict, tz_aware=False, connect=True), 'admdb')
+['admdb', 'admin', 'config', 'kelkarM', 'local']
+['admcol']
+<pymongo.cursor.Cursor object at 0x04118EF0>
+>>> 
+================== RESTART: C:/vaidehi/pythonconnection.py ==================
+hello9
+Database(MongoClient(host=['localhost:27017'], document_class=dict, tz_aware=False, connect=True), 'admdb')
+['admdb', 'admin', 'config', 'kelkarM', 'local']
+['admcol']
+{'_id': ObjectId('651e2bd3db07d02308735a99'), 'name': 'Amy', 'address': 'Apple st 652'}
+>>> 
+================== RESTART: C:/vaidehi/pythonconnection.py ==================
+hello9
+Database(MongoClient(host=['localhost:27017'], document_class=dict, tz_aware=False, connect=True), 'admdb')
+['admdb', 'admin', 'config', 'kelkarM', 'local']
+['admcol']
+<pymongo.cursor.Cursor object at 0x03AAE3B0>
+>>> 
+================== RESTART: C:/vaidehi/pythonconnection.py ==================
+hello9
+Database(MongoClient(host=['localhost:27017'], document_class=dict, tz_aware=False, connect=True), 'admdb')
+['admdb', 'admin', 'config', 'kelkarM', 'local']
+['admcol']
+{'_id': ObjectId('651e2bd3db07d02308735a99'), 'name': 'Amy', 'address': 'Apple st 652'}
+{'_id': ObjectId('651e2bd3db07d02308735a9a'), 'name': 'Hannah', 'address': 'Mountain 21'}
+{'_id': ObjectId('651e2bd3db07d02308735a9b'), 'name': 'Michael', 'address': 'Valley 345'}
+{'_id': ObjectId('651e2bd3db07d02308735a9c'), 'name': 'Sandy', 'address': 'Ocean blvd 2'}
+{'_id': ObjectId('651e2bd3db07d02308735a9d'), 'name': 'Betty', 'address': 'Green Grass 1'}
+{'_id': ObjectId('651e2bd3db07d02308735a9e'), 'name': 'Richard', 'address': 'Sky st 331'}
+{'_id': ObjectId('651e2bd3db07d02308735a9f'), 'name': 'Susan', 'address': 'One way 98'}
+{'_id': ObjectId('651e2bd3db07d02308735aa0'), 'name': 'Vicky', 'address': 'Yellow Garden 2'}
+{'_id': ObjectId('651e2bd3db07d02308735aa1'), 'name': 'Ben', 'address': 'Park Lane 38'}
+{'_id': ObjectId('651e2bd3db07d02308735aa2'), 'name': 'William', 'address': 'Central st 954'}
+{'_id': ObjectId('651e2bd3db07d02308735aa3'), 'name': 'Chuck', 'address': 'Main Road 989'}
+{'_id': ObjectId('651e2bd3db07d02308735aa4'), 'name': 'Viola', 'address': 'Sideway 1633'}
+{'_id': ObjectId('651e2c02db07d018a8a5cf4a'), 'name': 'Amy', 'address': 'Apple st 652'}
+{'_id': ObjectId('651e2c02db07d018a8a5cf4b'), 'name': 'Hannah', 'address': 'Mountain 21'}
+{'_id': ObjectId('651e2c02db07d018a8a5cf4c'), 'name': 'Michael', 'address': 'Valley 345'}
+{'_id': ObjectId('651e2c02db07d018a8a5cf4d'), 'name': 'Sandy', 'address': 'Ocean blvd 2'}
+{'_id': ObjectId('651e2c02db07d018a8a5cf4e'), 'name': 'Betty', 'address': 'Green Grass 1'}
+{'_id': ObjectId('651e2c02db07d018a8a5cf4f'), 'name': 'Richard', 'address': 'Sky st 331'}
+{'_id': ObjectId('651e2c02db07d018a8a5cf50'), 'name': 'Susan', 'address': 'One way 98'}
+{'_id': ObjectId('651e2c02db07d018a8a5cf51'), 'name': 'Vicky', 'address': 'Yellow Garden 2'}
+{'_id': ObjectId('651e2c02db07d018a8a5cf52'), 'name': 'Ben', 'address': 'Park Lane 38'}
+{'_id': ObjectId('651e2c02db07d018a8a5cf53'), 'name': 'William', 'address': 'Central st 954'}
+{'_id': ObjectId('651e2c02db07d018a8a5cf54'), 'name': 'Chuck', 'address': 'Main Road 989'}
+{'_id': ObjectId('651e2c02db07d018a8a5cf55'), 'name': 'Viola', 'address': 'Sideway 1633'}
+{'_id': ObjectId('651e2c5adb07d01894f6a434'), 'name': 'Amy', 'address': 'Apple st 652'}
+{'_id': ObjectId('651e2c5adb07d01894f6a435'), 'name': 'Hannah', 'address': 'Mountain 21'}
+{'_id': ObjectId('651e2c5adb07d01894f6a436'), 'name': 'Michael', 'address': 'Valley 345'}
+{'_id': ObjectId('651e2c5adb07d01894f6a437'), 'name': 'Sandy', 'address': 'Ocean blvd 2'}
+{'_id': ObjectId('651e2c5adb07d01894f6a438'), 'name': 'Betty', 'address': 'Green Grass 1'}
+{'_id': ObjectId('651e2c5adb07d01894f6a439'), 'name': 'Richard', 'address': 'Sky st 331'}
+{'_id': ObjectId('651e2c5adb07d01894f6a43a'), 'name': 'Susan', 'address': 'One way 98'}
+{'_id': ObjectId('651e2c5adb07d01894f6a43b'), 'name': 'Vicky', 'address': 'Yellow Garden 2'}
+{'_id': ObjectId('651e2c5adb07d01894f6a43c'), 'name': 'Ben', 'address': 'Park Lane 38'}
+{'_id': ObjectId('651e2c5adb07d01894f6a43d'), 'name': 'William', 'address': 'Central st 954'}
+{'_id': ObjectId('651e2c5adb07d01894f6a43e'), 'name': 'Chuck', 'address': 'Main Road 989'}
+{'_id': ObjectId('651e2c5adb07d01894f6a43f'), 'name': 'Viola', 'address': 'Sideway 1633'}
+>>> 
+================== RESTART: C:/vaidehi/pythonconnection.py ==================
+hello9
+Database(MongoClient(host=['localhost:27017'], document_class=dict, tz_aware=False, connect=True), 'ADMINDB')
+['admdb', 'admin', 'config', 'kelkarM', 'local']
+[]
+[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+>>> 
+================== RESTART: C:/vaidehi/pythonconnection.py ==================
+hello9
+Database(MongoClient(host=['localhost:27017'], document_class=dict, tz_aware=False, connect=True), 'ADMINDB')
+['ADMINDB', 'admdb', 'admin', 'config', 'kelkarM', 'local']
+['ADMINCOL']
+{'_id': 1, 'name': 'John', 'address': 'Highway 37'}
+>>> 
+================== RESTART: C:/vaidehi/pythonconnection.py ==================
+hello9
+Database(MongoClient(host=['localhost:27017'], document_class=dict, tz_aware=False, connect=True), 'ADMINDB')
+['ADMINDB', 'admdb', 'admin', 'config', 'kelkarM', 'local']
+['ADMINCOL']
+{'_id': 1, 'name': 'John', 'address': 'Highway 37'}
+{'_id': 1, 'name': 'John', 'address': 'Highway 37'}
+{'_id': 2, 'name': 'Peter', 'address': 'Lowstreet 27'}
+{'_id': 3, 'name': 'Amy', 'address': 'Apple st 652'}
+{'_id': 4, 'name': 'Hannah', 'address': 'Mountain 21'}
+{'_id': 5, 'name': 'Michael', 'address': 'Valley 345'}
+{'_id': 6, 'name': 'Sandy', 'address': 'Ocean blvd 2'}
+{'_id': 7, 'name': 'Betty', 'address': 'Green Grass 1'}
+{'_id': 8, 'name': 'Richard', 'address': 'Sky st 331'}
+{'_id': 9, 'name': 'Susan', 'address': 'One way 98'}
+{'_id': 10, 'name': 'Vicky', 'address': 'Yellow Garden 2'}
+{'_id': 11, 'name': 'Ben', 'address': 'Park Lane 38'}
+{'_id': 12, 'name': 'William', 'address': 'Central st 954'}
+{'_id': 13, 'name': 'Chuck', 'address': 'Main Road 989'}
+{'_id': 14, 'name': 'Viola', 'address': 'Sideway 1633'}
+>>> 
+================== RESTART: C:/vaidehi/pythonconnection.py ==================
+hello9
+Database(MongoClient(host=['localhost:27017'], document_class=dict, tz_aware=False, connect=True), 'ADMINDB')
+['ADMINDB', 'admdb', 'admin', 'config', 'kelkarM', 'local']
+['ADMINCOL']
+{'_id': 1, 'name': 'John', 'address': 'Highway 37'}
+{'_id': 1, 'name': 'John', 'address': 'Highway 37'}
+{'_id': 2, 'name': 'Peter', 'address': 'Lowstreet 27'}
+{'_id': 3, 'name': 'Amy', 'address': 'Apple st 652'}
+{'_id': 4, 'name': 'Hannah', 'address': 'Mountain 21'}
+{'_id': 5, 'name': 'Michael', 'address': 'Valley 345'}
+{'_id': 6, 'name': 'Sandy', 'address': 'Ocean blvd 2'}
+{'_id': 7, 'name': 'Betty', 'address': 'Green Grass 1'}
+{'_id': 8, 'name': 'Richard', 'address': 'Sky st 331'}
+{'_id': 9, 'name': 'Susan', 'address': 'One way 98'}
+{'_id': 10, 'name': 'Vicky', 'address': 'Yellow Garden 2'}
+{'_id': 11, 'name': 'Ben', 'address': 'Park Lane 38'}
+{'_id': 12, 'name': 'William', 'address': 'Central st 954'}
+{'_id': 13, 'name': 'Chuck', 'address': 'Main Road 989'}
+{'_id': 14, 'name': 'Viola', 'address': 'Sideway 1633'}
+{'name': 'John', 'address': 'Highway 37'}
+{'name': 'Peter', 'address': 'Lowstreet 27'}
+{'name': 'Amy', 'address': 'Apple st 652'}
+{'name': 'Hannah', 'address': 'Mountain 21'}
+{'name': 'Michael', 'address': 'Valley 345'}
+{'name': 'Sandy', 'address': 'Ocean blvd 2'}
+{'name': 'Betty', 'address': 'Green Grass 1'}
+{'name': 'Richard', 'address': 'Sky st 331'}
+{'name': 'Susan', 'address': 'One way 98'}
+{'name': 'Vicky', 'address': 'Yellow Garden 2'}
+{'name': 'Ben', 'address': 'Park Lane 38'}
+{'name': 'William', 'address': 'Central st 954'}
+{'name': 'Chuck', 'address': 'Main Road 989'}
+{'name': 'Viola', 'address': 'Sideway 1633'}
+>>> 
+================== RESTART: C:/vaidehi/pythonconnection.py ==================
+hello9
+Database(MongoClient(host=['localhost:27017'], document_class=dict, tz_aware=False, connect=True), 'ADMINDB')
+['ADMINDB', 'admdb', 'admin', 'config', 'kelkarM', 'local']
+['ADMINCOL']
+{'name': 'John', 'address': 'Highway 37'}
+{'name': 'Peter', 'address': 'Lowstreet 27'}
+{'name': 'Amy', 'address': 'Apple st 652'}
+{'name': 'Hannah', 'address': 'Mountain 21'}
+{'name': 'Michael', 'address': 'Valley 345'}
+{'name': 'Sandy', 'address': 'Ocean blvd 2'}
+{'name': 'Betty', 'address': 'Green Grass 1'}
+{'name': 'Richard', 'address': 'Sky st 331'}
+{'name': 'Susan', 'address': 'One way 98'}
+{'name': 'Vicky', 'address': 'Yellow Garden 2'}
+{'name': 'Ben', 'address': 'Park Lane 38'}
+{'name': 'William', 'address': 'Central st 954'}
+{'name': 'Chuck', 'address': 'Main Road 989'}
+{'name': 'Viola', 'address': 'Sideway 1633'}
+>>> 
+================== RESTART: C:/vaidehi/pythonconnection.py ==================
+hello9
+Database(MongoClient(host=['localhost:27017'], document_class=dict, tz_aware=False, connect=True), 'ADMINDB')
+['ADMINDB', 'admdb', 'admin', 'config', 'kelkarM', 'local']
+['ADMINCOL']
+{'_id': 1, 'name': 'John'}
+{'_id': 2, 'name': 'Peter'}
+{'_id': 3, 'name': 'Amy'}
+{'_id': 4, 'name': 'Hannah'}
+{'_id': 5, 'name': 'Michael'}
+{'_id': 6, 'name': 'Sandy'}
+{'_id': 7, 'name': 'Betty'}
+{'_id': 8, 'name': 'Richard'}
+{'_id': 9, 'name': 'Susan'}
+{'_id': 10, 'name': 'Vicky'}
+{'_id': 11, 'name': 'Ben'}
+{'_id': 12, 'name': 'William'}
+{'_id': 13, 'name': 'Chuck'}
+{'_id': 14, 'name': 'Viola'}
+================== RESTART: C:/vaidehi/pythonconnection.py ==================
+hello9
+Database(MongoClient(host=['localhost:27017'], document_class=dict, tz_aware=False, connect=True), 'ADMINDB')
+['ADMINDB', 'admdb', 'admin', 'config', 'kelkarM', 'local']
+['ADMINCOL']
+{'_id': 11, 'name': 'Ben', 'address': 'Park Lane 38'}
+>>> 
+================== RESTART: C:/vaidehi/pythonconnection.py ==================
+hello9
+Database(MongoClient(host=['localhost:27017'], document_class=dict, tz_aware=False, connect=True), 'ADMINDB')
+['ADMINDB', 'admdb', 'admin', 'config', 'kelkarM', 'local']
+['ADMINCOL']
+{'_id': 5, 'name': 'Michael', 'address': 'Valley 345'}
+{'_id': 8, 'name': 'Richard', 'address': 'Sky st 331'}
+{'_id': 10, 'name': 'Vicky', 'address': 'Yellow Garden 2'}
+{'_id': 14, 'name': 'Viola', 'address': 'Sideway 1633'}
+>>> 
+================== RESTART: C:/vaidehi/pythonconnection.py ==================
+hello9
+Database(MongoClient(host=['localhost:27017'], document_class=dict, tz_aware=False, connect=True), 'ADMINDB')
+['ADMINDB', 'admdb', 'admin', 'config', 'kelkarM', 'local']
+['ADMINCOL']
+{'_id': 8, 'name': 'Richard', 'address': 'Sky st 331'}
+{'_id': 14, 'name': 'Viola', 'address': 'Sideway 1633'}
+>>> 
+================== RESTART: C:/vaidehi/pythonconnection.py ==================
+hello9
+Database(MongoClient(host=['localhost:27017'], document_class=dict, tz_aware=False, connect=True), 'ADMINDB')
+['ADMINDB', 'admdb', 'admin', 'config', 'kelkarM', 'local']
+['ADMINCOL']
+{'_id': 3, 'name': 'Amy', 'address': 'Apple st 652'}
+{'_id': 11, 'name': 'Ben', 'address': 'Park Lane 38'}
+{'_id': 7, 'name': 'Betty', 'address': 'Green Grass 1'}
+{'_id': 13, 'name': 'Chuck', 'address': 'Main Road 989'}
+{'_id': 4, 'name': 'Hannah', 'address': 'Mountain 21'}
+{'_id': 1, 'name': 'John', 'address': 'Highway 37'}
+{'_id': 5, 'name': 'Michael', 'address': 'Valley 345'}
+{'_id': 2, 'name': 'Peter', 'address': 'Lowstreet 27'}
+{'_id': 8, 'name': 'Richard', 'address': 'Sky st 331'}
+{'_id': 6, 'name': 'Sandy', 'address': 'Ocean blvd 2'}
+{'_id': 9, 'name': 'Susan', 'address': 'One way 98'}
+{'_id': 10, 'name': 'Vicky', 'address': 'Yellow Garden 2'}
+{'_id': 14, 'name': 'Viola', 'address': 'Sideway 1633'}
+{'_id': 12, 'name': 'William', 'address': 'Central st 954'}
+>>> 
+================== RESTART: C:/vaidehi/pythonconnection.py ==================
+hello9
+Database(MongoClient(host=['localhost:27017'], document_class=dict, tz_aware=False, connect=True), 'ADMINDB')
+['ADMINDB', 'admdb', 'admin', 'config', 'kelkarM', 'local']
+['ADMINCOL']
+{'_id': 12, 'name': 'William', 'address': 'Central st 954'}
+{'_id': 14, 'name': 'Viola', 'address': 'Sideway 1633'}
+{'_id': 10, 'name': 'Vicky', 'address': 'Yellow Garden 2'}
+{'_id': 9, 'name': 'Susan', 'address': 'One way 98'}
+{'_id': 6, 'name': 'Sandy', 'address': 'Ocean blvd 2'}
+{'_id': 8, 'name': 'Richard', 'address': 'Sky st 331'}
+{'_id': 2, 'name': 'Peter', 'address': 'Lowstreet 27'}
+{'_id': 5, 'name': 'Michael', 'address': 'Valley 345'}
+{'_id': 1, 'name': 'John', 'address': 'Highway 37'}
+{'_id': 4, 'name': 'Hannah', 'address': 'Mountain 21'}
+{'_id': 13, 'name': 'Chuck', 'address': 'Main Road 989'}
+{'_id': 7, 'name': 'Betty', 'address': 'Green Grass 1'}
+{'_id': 11, 'name': 'Ben', 'address': 'Park Lane 38'}
+{'_id': 3, 'name': 'Amy', 'address': 'Apple st 652'}
+>>> 
+================== RESTART: C:/vaidehi/pythonconnection.py ==================
+hello9
+Database(MongoClient(host=['localhost:27017'], document_class=dict, tz_aware=False, connect=True), 'ADMINDB')
+['ADMINDB', 'admdb', 'admin', 'config', 'kelkarM', 'local']
+['ADMINCOL']
+>>> 
+================== RESTART: C:/vaidehi/pythonconnection.py ==================
+hello9
+Database(MongoClient(host=['localhost:27017'], document_class=dict, tz_aware=False, connect=True), 'ADMINDB')
+['ADMINDB', 'admdb', 'admin', 'config', 'kelkarM', 'local']
+['ADMINCOL']
+2  documents deleted.
+>>> 
+================== RESTART: C:/vaidehi/pythonconnection.py ==================
+hello9
+Database(MongoClient(host=['localhost:27017'], document_class=dict, tz_aware=False, connect=True), 'ADMINDB')
+['ADMINDB', 'admdb', 'admin', 'config', 'kelkarM', 'local']
+['ADMINCOL']
+{'_id': 1, 'name': 'John', 'address': 'Highway 37'}
+{'_id': 2, 'name': 'Peter', 'address': 'Lowstreet 27'}
+{'_id': 3, 'name': 'Amy', 'address': 'Apple st 652'}
+{'_id': 5, 'name': 'Michael', 'address': 'Canyon 123'}
+{'_id': 6, 'name': 'Sandy', 'address': 'Ocean blvd 2'}
+{'_id': 7, 'name': 'Betty', 'address': 'Green Grass 1'}
+{'_id': 9, 'name': 'Susan', 'address': 'One way 98'}
+{'_id': 10, 'name': 'Vicky', 'address': 'Yellow Garden 2'}
+{'_id': 11, 'name': 'Ben', 'address': 'Park Lane 38'}
+{'_id': 12, 'name': 'William', 'address': 'Central st 954'}
+{'_id': 13, 'name': 'Chuck', 'address': 'Main Road 989'}
+>>> 
+================== RESTART: C:/vaidehi/pythonconnection.py ==================
+hello9
+Database(MongoClient(host=['localhost:27017'], document_class=dict, tz_aware=False, connect=True), 'ADMINDB')
+['ADMINDB', 'admdb', 'admin', 'config', 'kelkarM', 'local']
+['ADMINCOL']
+0 documents updated.
+>>> 
+================== RESTART: C:/vaidehi/pythonconnection.py ==================
+hello9
+Database(MongoClient(host=['localhost:27017'], document_class=dict, tz_aware=False, connect=True), 'ADMINDB')
+['ADMINDB', 'admdb', 'admin', 'config', 'kelkarM', 'local']
+['ADMINCOL']
+{'_id': 1, 'name': 'John', 'address': 'Highway 37'}
+{'_id': 2, 'name': 'Peter', 'address': 'Lowstreet 27'}
+{'_id': 3, 'name': 'Amy', 'address': 'Apple st 652'}
+{'_id': 5, 'name': 'Michael', 'address': 'Canyon 123'}
+{'_id': 6, 'name': 'Sandy', 'address': 'Ocean blvd 2'}
+>>> 
+================== RESTART: C:/vaidehi/pythonconnection.py ==================
+hello9
+Database(MongoClient(host=['localhost:27017'], document_class=dict, tz_aware=False, connect=True), 'ADMINDB')
+['ADMINDB', 'admdb', 'admin', 'config', 'kelkarM', 'local']
+['ADMINCOL']
+{'_id': 1, 'name': 'John', 'address': 'Highway 37'}
+{'_id': 2, 'name': 'Peter', 'address': 'Lowstreet 27'}
