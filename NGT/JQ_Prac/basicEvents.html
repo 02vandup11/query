@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery-3.2.1.min.js">
+    </script>
+    <script>
+        $(document).ready(function(){
+            console.log("hello");
+
+            $('#b1').click(function(){
+                alert("you clicked me !")
+            })
+
+            $('.b2').dblclick(function(){
+                alert("you double clicked me !")
+            })
+
+            $('*').css({"font-style":"italic","font-size":"1rem"})
+
+            $('#i1').change(function(){
+                console.log("keypress")
+            })
+
+            $('button').css({"border-radius":"8rem","background-color":"pink"})
+
+            $('#b3').click(function(){
+                $('div').hide()
+            })
+
+            $('#b4').click(function(){
+                $('div').show()
+            })
+
+            $('#b5').click(function(){
+                $('div').fadeIn()
+            })
+
+            $('#b6').click(function(){
+                $('div').fadeOut()
+            })
+
+            $('#b7').click(function(){
+                $('div').fadeToggle()
+            })
+
+            $('#b8').click(function(){
+                $('div').fadeTo('slow',0.5)
+            })
+
+            $('#b9').click(function(){
+                $('div').slideDown()
+            })
+
+            $('#b10').click(function(){
+                $('div').slideUp()
+            })
+
+            $('#b11').click(function(){
+                $('div').slideToggle();
+                    alert("end")
+                
+            })
+
+            $('#b12').click(function(){
+                $('div').animate({left:'100',opacity:0.5}).hide().show().animate({right:'100',opacity:0.6})
+            })
+
+            $('#b13').click(function(){
+                var text = $('#p1').text()
+                alert (text)
+            })
+
+            $('#b14').click(function(){
+                var html = $('#p1').html()
+                alert (html)
+            })
+
+            $('#b15').click(function(){
+                var val = $('#i2').val()
+                alert (val)
+            })
+
+            $('#b16').click(function(){
+                var href=$('#a').attr("href")
+                alert (href)
+            })
+        })
+    </script>
+    
+</head>
+<body>
+    <button  type="button" id="b1" >click</button>
+    <button type="button"class="b2">dblclick</button>
+    <input type="text" id="i1">
+
+    <div style="height: 100px;background-color: pink;border-radius:5rem"></div>
+
+    <button type="button" id="b3">Hide</button>
+    <button type="button" id="b4">show</button>
+    <br><br>
+    <button type="button" id="b5">FadeIn</button>
+    <button type="button" id="b6">FadeOut</button>
+    <button type="button" id="b7">FadeToggle</button>
+    <button type="button" id="b8">FadeTo</button>
+    <br><br>
+    <button type="button" id="b9">Slidedown</button>
+    <button type="button" id="b10">Slideup</button>
+    <button type="button" id="b11">Slidetoggle</button>
+<br>
+    <!-- <div style="position: relative;">
+    
+        <div style="height: 30rem; width:10rem;background-color: aqua;position: absolute;top: 5%;left: 20%;">
+heyyyy
+        </div></div> -->
+
+   
+    <button type="button" id="b12">animateee</button>
+    <br><br>
+    <p id="p1">Hello I am changing this text now to <b>bold</b></p>
+    <button type="button" id="b13">text</button>
+    <button type="button" id="b14">html</button>
+    <button type="button" id="b15">value</button>
+    <input type="text" id="i2">
+    <a href="google.com" id="a" >href</a>
+    <button type="button" id="b16">href</button>
+</body>
+</html>
