@@ -1,0 +1,166 @@
+####create db#####
+ use vandu
+
+#####craete collection######
+
+#1st
+db.createCollection("vandu_col")
+
+#2nd
+db.vandu_col1.insert({"name":"vandy"})
+
+####show collections#####
+show collections
+vandu_col
+vandu_col1
+
+###insert####
+#one
+db.vandu_col1.insert({"name":"vandy"})
+
+#insertone
+db.vandu_col1.insertOne({"name":"rushi"})
+{
+  acknowledged: true,
+  insertedId: ObjectId("652426333b59919350fade3c")
+}
+
+#insertmany
+db.vandu_col1.insertMany([{"name":"samm"},{"name":"aksh"},{"name":"shree"}])
+{
+  acknowledged: true,
+  insertedIds: {
+    '0': ObjectId("652426e93b59919350fade3d"),
+    '1': ObjectId("652426e93b59919350fade3e"),
+    '2': ObjectId("652426e93b59919350fade3f")
+  }
+}
+
+#####display######
+
+db.vandu_col1.find().pretty()
+[
+  { _id: ObjectId("6524254f3b59919350fade3b"), name: 'vandy' },
+  { _id: ObjectId("652426333b59919350fade3c"), name: 'rushi' },
+  { _id: ObjectId("652426e93b59919350fade3d"), name: 'samm' },
+  { _id: ObjectId("652426e93b59919350fade3e"), name: 'aksh' },
+  { _id: ObjectId("652426e93b59919350fade3f"), name: 'shree' }
+]
+
+vandu> db.vandu_col1.find()
+[
+  { _id: ObjectId("6524254f3b59919350fade3b"), name: 'vandy' },
+  { _id: ObjectId("652426333b59919350fade3c"), name: 'rushi' },
+  { _id: ObjectId("652426e93b59919350fade3d"), name: 'samm' },
+  { _id: ObjectId("652426e93b59919350fade3e"), name: 'aksh' },
+  { _id: ObjectId("652426e93b59919350fade3f"), name: 'shree' }
+]
+
+vandu> db.vandu_col1.findOne()
+{ _id: ObjectId("6524254f3b59919350fade3b"), name: 'vandy' }
+
+######update#####
+
+#set
+db.vandu_col1.updateMany({},{$set:{"age": 18}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 5,
+  modifiedCount: 5,
+  upsertedCount: 0
+}
+
+#set
+vandu> db.vandu_col1.updateMany({"name":"shree"},{$set:{"age": 13}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 1,
+  modifiedCount: 1,
+  upsertedCount: 0
+}
+
+vandu> db.vandu_col1.find()
+[
+  { _id: ObjectId("6524254f3b59919350fade3b"), name: 'vandy', age: 18 },
+  { _id: ObjectId("652426333b59919350fade3c"), name: 'rushi', age: 18 },
+  { _id: ObjectId("652426e93b59919350fade3d"), name: 'samm', age: 18 },
+  { _id: ObjectId("652426e93b59919350fade3e"), name: 'aksh', age: 18 },
+  { _id: ObjectId("652426e93b59919350fade3f"), name: 'shree', age: 13 }
+]
+
+##update###
+
+#unset
+db.vandu_col1.updateMany({},{$unset:{"age":13}})
+{
+  acknowledged: true,
+  insertedId: null,
+  matchedCount: 5,
+  modifiedCount: 5,
+  upsertedCount: 0
+}
+
+vandu> db.vandu_col1.find()
+[
+  { _id: ObjectId("6524254f3b59919350fade3b"), name: 'vandy' },
+  { _id: ObjectId("652426333b59919350fade3c"), name: 'rushi' },
+  { _id: ObjectId("652426e93b59919350fade3d"), name: 'samm' },
+  { _id: ObjectId("652426e93b59919350fade3e"), name: 'aksh' },
+  { _id: ObjectId("652426e93b59919350fade3f"), name: 'shree' }
+]
+
+#drop document
+
+#one doc
+db.vandu_col1.deleteMany({"name":"vandy"})
+{ acknowledged: true, deletedCount: 1 }
+
+vandu> db.vandu_col1.find()
+[
+  { _id: ObjectId("652426333b59919350fade3c"), name: 'rushi' },
+  { _id: ObjectId("652426e93b59919350fade3d"), name: 'samm' },
+  { _id: ObjectId("652426e93b59919350fade3e"), name: 'aksh' },
+  { _id: ObjectId("652426e93b59919350fade3f"), name: 'shree' }
+]
+
+#many
+ db.vandu_col1.deleteMany({})
+{ acknowledged: true, deletedCount: 4 }
+vandu> db.vandu_col1.find()
+
+vandu>
+
+
+#####drop collections
+db.vandu_col1.drop()
+true
+vandu> show collections
+vandu_col
+
+
+##########drop db
+db.dropDatabase()
+{ ok: 1, dropped: 'vandu' }
+vandu> show dbs
+admin    40.00 KiB
+config  108.00 KiB
+local    40.00 KiB
+
+------------------------------------------------------------------------------
+import
+
+mongoimport --host localhost --port 27017 --db importdb --collection importcol --type json --jsonArray "C:\Users\Komal\Downloads\Third Year\sem5\JQ_Prac\creating_json.json"
+
+export
+
+mongoexport --host localhost --port 27017 --db importdb --collection importcol --type json --out "C:\Users\Komal\Downloads\Third Year\sem5\JQ_Prac\export.json"
+
+-------------------------------------------------------------------------------
+backup
+mongodump --host localhost --port 27017 --db importdb --out "C:\Users\Komal\Downloads\Third Year\sem5\JQ_Prac"
+
+open cmd-path- mongo-show dbs-drop the db the restore n the after command of restore it will come back
+restore
+mongorestore --host localhost --port 27017 --db importdb "C:\Users\Komal\Downloads\Third Year\sem5\JQ_Prac\importdb"
