@@ -1,0 +1,204 @@
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!--5--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#site map
+solution exploer->website->right click->add new item->sitemap->ok
+put url,title,description in site map node all three
+go to site master page
+delete hideskip n put treeview
+go to deisgn
+as you added tree view
+click the arrow button
+source->add new source->sitemap->ok
+and *you are done with your site map*
+
+#master page
+solution exploer->website->right click->add new item->masterpage->ok
+solution exploer->website->right click->add new item->webform->tick master page->ok
+go to master page
+
+<form id="form1" runat="server">
+|--this will be your header part--|
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+      |-- this is the body part--|
+        </asp:ContentPlaceHolder>
+    </div>
+|--this is the footer part--|
+    </form>
+
+add all the content in your header and footer part
+then run the web form in which you ticked the master page 🔽 
+Ps:- DONT RUN THE MASTER PAGE, RUN THE WEB PAGE
+and *you are done with master page*
+
+#beautification
+solution exploer->website->right click->add new item->stylesheet->ok
+now in stylesheet page add your css content 
+save the file
+now go to the master page add the link by "link rel href" in the head tag
+save the file
+now run the default page connected with master
+
+the css will get applied on the master page only
+
+if you want a css to a spefic content in default page
+use cssClss propriety 
+Ps:- DONT USE "ID" AS IDs ARE REPEATED IN MASTER PAGE TOO
+
+#skin
+solution exploer->website->right click->add new item->skin item->ok
+in the skin file add the css 
+<asp:TextBox  runat="server" BorderColor="#FF9966" BorderStyle="Inset"></asp:TextBox>
+NOTE: NO "ID""RUNAT", ONLY THE CSS COMMANDS
+HACK: ADD THE CSS BY DEFAULT PAGE THEN ADD IN TO THE SKIN PAGE N REMOVE THE ID
+now in default page
+in the page title line
+add theme and link the skin file
+else
+you can use skin id i.e adding the skinid to the skin page and also default page
+and *you are done with the skin file*
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!--5--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!6!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+#data base connectivity
+
+view->server explorer->data connection->right click
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!6!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!--calendar--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+ protected void Calendar1_DayRender(object sender, DayRenderEventArgs e)
+        {
+            if (e.Day.Date.Day == 5 && e.Day.Date.Month == 9)
+            {
+                e.Cell.BackColor = System.Drawing.Color.Yellow;
+                Label lbl = new Label();
+                lbl.Text = "<br> happy teachers day";
+                e.Cell.Controls.Add(lbl);
+                Label12.Text = "happy";
+}
+
+if (e.Day.Date.Day == 24 && e.Day.Date.Month == 10)
+            {
+                Calendar1.SelectedDate = new DateTime(2023, 10, 24);
+                Calendar1.SelectedDates.SelectRange(Calendar1.SelectedDate,
+                    Calendar1.SelectedDate.AddDays(5));
+                Label lbl = new Label();
+                lbl.Text = "<br> diwali";
+                e.Cell.Controls.Add(lbl);
+            }
+
+on button clicck - add to cal
+
+TimeSpan t = cal1.SelectedDate - cal2.SelectedDate;
+lbl1.Text = "no od days"+ t.Days.ToString();
+
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!--calendar--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!--10--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+create a web page in which 
+create button to write xml
+double tap n write css file
+
+add the namespace :-using System.IO; and using System.Xml
+now button css-
+	//Filestream class
+	//fs object
+	Filestream fs = new Filestream("path write.xml",Filemode.Create);
+
+	XmlTextWriter writer = new XmlTextWriter(fs,null);
+	writer.Formatting = Formatting.Indented;
+
+	writer.WriteStartDocument();
+	writer.WriteStartElement("students");
+
+	writer.WriteStartElement("student");
+	writer.WriteAttributeString("name","abc");
+	writer.WriteAttributeString("age","19");
+	writer.WriteEndElement();
+
+	writer.WriteStartElement("student");
+	writer.WriteAttributeString("name","xyz");
+	writer.WriteAttributeString("age","15");
+	writer.WriteEndElement();
+
+	writer.WriteStartElement("student");
+	writer.WriteAttributeString("name","pqr");
+	writer.WriteAttributeString("age","10");
+	writer.WriteEndElement();
+
+
+	writer.WriteEndElement();
+	writer.WriteEndDocument();
+	writer.Close();
+	fs.Close();
+---------------------------------------
+to read xml
+(you can create on the same form by adding button else other form )
+
+1st method to read
+craete a new web form
+web application -> right click -> add -> new item ->web form
+add a gridview
+add a button->double tap->css file of button
+
+	XmlDataSource ds = new XmlDataSource();
+	ds DataFile="path write.xml";
+	GridView1.DataSource = ds;
+	GridView1.DataBind();
+
+2nd method to read
+add a label->double tap->css file of button
+	XmlDataSource ds = new XmlDataSource();
+	ds.DataFile="path write.xml";
+	GridView1.DataSource = ds;
+	GridView1.DataBind();
+	Label1.Text= "";
+	XmlTextReader reader = new XmlTextReader("path write.xml");
+	while(reader.Read())
+	{
+		Label1.text+=reader.GetAttribute("name");
+		Label1.text+=reader.GetAttribute("name");
+		Label1.text+="<br>"
+	}
+	reader.Close();
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!--10--!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+	
+
+	
+ 
+
+
+	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+skin:- web forms ko lagta hai
+master:- css
